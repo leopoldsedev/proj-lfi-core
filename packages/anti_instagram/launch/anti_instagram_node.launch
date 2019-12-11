@@ -3,9 +3,9 @@
 
 	<arg name="veh"/>
 	<arg name="ai_interval"   default="10"  doc="time interval after which the ai algorithm should be re-performed"/>
-	<arg name="resize"        default="0.2" doc="resizing factor to scale the image down or up"/>
+	<arg name="resize"        default="1" doc="resizing factor to scale the image down or up"/>
   <arg name="cb_percentage" default="0.8" doc="percentage for auto-colorbalance"/>
-  <arg name="scale_percent" default="0.4" doc="resizing factor to scale the image down or up during calculating parameters"/>
+  <arg name="scale_percent" default="1" doc="resizing factor to scale the image down or up during calculating parameters"/>
 
   <param name="~veh" value="$(arg veh)"/>
 
