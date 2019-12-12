@@ -156,6 +156,9 @@ nodes:
   central_fleet_planning_node: "central_fleet_planning_node/switch"
   coordinator_node: "coordinator_node/switch"  #NOTE explicit coordination
   unicorn_intersection_node: "unicorn_intersection_node/switch" #NOTE a.k.a. semi closed loop intersection navigation
+  localization_node: "localization_node/switch"
+  birdseye_node: "birdseye_node/switch"
+  virtual_lane_node: "virtual_lane_node/switch"
   obstacle_avoidance_node: "obstacle_avoidance_node/switch"
   obstacle_detection_node: "obstacle_detection_node/switch"
   implicit_coordination_node: "implicit_coordination_node/switch"
@@ -188,6 +191,9 @@ states:
       parallel_autonomy_on: "SAFE_JOYSTICK_CONTROL"
     active_nodes:
       - lane_filter_node
+      - birdseye_node
+      - localization_node
+      - virtual_lane_node
       - line_detector_node
       - stop_line_filter_node
       - framerate_high
@@ -252,6 +258,9 @@ states:
       intersection_go: "INTERSECTION_CONTROL"
     active_nodes:
       - apriltag_node #NOTE
+      - birdseye_node
+      - localization_node
+      - virtual_lane_node
       #- lane_filter_node
      # - lane_controller_node
       #- line_detector_node # NOTE possibly
@@ -273,6 +282,9 @@ states:
 #      - apriltag_node
       - decoder_node
       - led_emitter_node
+      - birdseye_node
+      - localization_node
+      - virtual_lane_node
 #      - line_detector_node
 #      - lane_filter_node
 #     - charging_control
@@ -282,7 +294,6 @@ states:
 #      - intersection_navigation_node
 #      - intersection_localization_node
       - lane_controller_node
-      - localization_node
 #      - unicorn_intersection_node
     current_status: "in_progress"
 
