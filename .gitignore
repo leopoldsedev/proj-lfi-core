@@ -48,7 +48,7 @@ qtcreator-*
 .#*
 
 # Catkin custom files
-CATKIN_IGNORE
+#CATKIN_IGNORE
 benchmark/
 auto_calibration/
 charging_control/
