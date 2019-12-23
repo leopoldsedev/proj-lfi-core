@@ -4,7 +4,7 @@ import rospy
 import threading
 
 from duckietown import DTROS
-from anti_instagram.AntiInstagram import AntiInstagram
+from anti_instagram import AntiInstagram
 from cv_bridge import CvBridge
 from duckietown_utils.jpg import bgr_from_jpg
 from sensor_msgs.msg import CompressedImage
